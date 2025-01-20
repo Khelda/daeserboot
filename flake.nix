@@ -4,9 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nvim-config.url = "github:Khelda/nvim-config";
+    zshrc.url = "github:Khelda/zshrc.d";
   };
 
-  outputs = { self, nixpkgs, nvim-config, ... }:
+  outputs = { self, nixpkgs, nvim-config, zshrc, ... }:
     let system = "x86_64-linux";
     in {
       nixosConfigurations = {
@@ -17,8 +18,11 @@
               imports = [
                 (modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix")
               ];
-              environment.systemPackages =
-                [ nvim-config.packages."${system}".neovim-offline ];
+              environment.systemPackages = with nixpkgs; [
+                nvim-config.packages."${system}".neovim-full-offline
+                zshrc.packages."${system}".zsh-full-offline
+              ];
+              programs.zsh.enable = true;
             })
           ];
         };

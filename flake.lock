@@ -17,6 +17,23 @@
         "type": "indirect"
       }
     },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1735563628,
@@ -48,6 +65,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1705997911,
+        "narHash": "sha256-RAy0vwSEaXG/VSZPq2Zcc7V7YHpJZzcaHRGs9SW3V/0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f1e0a0a3c51f45e1a12fbe9ed527aadaaf6ac39a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nvim-config": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -70,7 +102,8 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nvim-config": "nvim-config"
+        "nvim-config": "nvim-config",
+        "zshrc": "zshrc"
       }
     },
     "systems": {
@@ -85,6 +118,40 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "zshrc": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1735754670,
+        "narHash": "sha256-s9qqUBjOpnLkkQE/z680+Qz15QACGcRU8B5AelOL++o=",
+        "owner": "Khelda",
+        "repo": "zshrc.d",
+        "rev": "93bf334d346e54bb00b1d66ed414aa6e3b8a022e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Khelda",
+        "repo": "zshrc.d",
         "type": "github"
       }
     }
